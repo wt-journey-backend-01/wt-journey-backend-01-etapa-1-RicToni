@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lista de Lanches</title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <img src="/images/logo.png" alt="">
+    </header>
+    <div id="cardapio">
+        <h1>Cardápio de lanches</h1>
+        <ul id="lista-lanches"></ul>
+    </div>
+
+    <div id="forms">
+        <form id="form-lanche">
+            <h2>Criar novo lanche:</h2>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="ingredientes">Ingredientes:</label><br>
+            <textarea id="ingredientes" name="ingredientes" rows="3" required></textarea><br><br>
+
+            <button type="submit">Adicionar Lanche</button>
+        </form>
+        <p id="mensagem" style="color: green;"></p>
+
+        
+        <form id="form-sugestao">
+            <h2>Sugerir novo lanche:</h2>
+            <label for="nome-sugestao">Nome:</label><br>
+            <input type="text" id="nome-sugestao" name="nome" required><br><br>
+
+            <label for="ingredientes-sugestao">Ingredientes:</label><br>
+            <textarea id="ingredientes-sugestao" name="ingredientes" rows="3" required></textarea><br><br>
+
+            <button type="submit">Sugerir Lanche</button>
+        </form>
+
+    </div>
+
+    <script src="/scripts/lanchScripts.js"></script>
+</body>
+</html>

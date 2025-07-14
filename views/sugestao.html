@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Obrigado pela sugestão!</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <header id="cabecalho">
+    <img src="/images/logo.png" alt="">
+  </header>
+  <h1>Obrigado pela sugestão!</h1>
+  <div id="container-sugestion">
+    <p class="mb-4">Recebemos sua sugestão de lanche com sucesso. 😊</p>
+
+    <div class="sugestao">
+      <h2 class="mb-5">Detalhes da sugestão:</h2>
+      <p><strong>Nome:</strong> <span id="nome-sugerido">...</span></p>
+      <p><strong>Ingredientes:</strong> <span id="ingredientes-sugeridos">...</span></p>
+    </div>
+
+    <a href="/">Voltar ao cardápio</a>
+  </div>
+  <script>
+    const sugestao = JSON.parse(localStorage.getItem('ultimaSugestao'));
+
+    if (sugestao) {
+      document.getElementById('nome-sugerido').textContent = sugestao.nome;
+      document.getElementById('ingredientes-sugeridos').textContent = sugestao.ingredientes;
+      localStorage.removeItem('ultimaSugestao');
+    }
+  </script>
+</body>
+</html>

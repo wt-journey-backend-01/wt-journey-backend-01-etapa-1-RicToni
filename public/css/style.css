@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-azullogo: #00182c;
+    --color-orangelogo : #fdb034;
+   
+}
+
+#cabecalho, button, a {
+    background-color: var(--color-azullogo);
+}
+
+button:hover, a:hover {
+    background-color: var(--color-azullogo);
+    opacity: 0.8;
+}
+
+h1, #ctt { 
+    background-color: var(--color-orangelogo);
+    opacity: 0.9;
+}
+
+@layer components {
+    button { 
+        @apply
+        font-bold
+        text-sm
+        text-white
+        rounded-lg
+        outline-orange-700
+        outline-offset-2
+        outline-3
+        hover:bg-sky-700/50
+        p-3   
+    }
+
+    a {
+        @apply
+        font-bold
+        text-sm
+        text-white
+        rounded-lg
+        outline-orange-700
+        outline-offset-2
+        outline-3
+        hover:bg-sky-700/50
+        p-3   
+        m-4
+    }
+
+    h1  {
+        @apply
+        text-5xl
+        p-4.5
+        m-5
+        flex
+        place-content-center
+        outline-orange-700
+        outline-offset-2
+        outline-3
+        rounded-lg
+        text-orange-800
+        font-bold
+        font-sans 
+    }
+
+    h2 {
+        @apply
+        text-3xl
+        font-bold   
+    }
+
+    li {
+        @apply
+        bg-gray-300
+        p-3
+        hover:bg-gray-500/50
+        rounded-b-md
+    }
+
+    body {
+        @apply
+        bg-gray-200
+        flex
+        flex-col    
+    }
+
+    input {
+        @apply
+        text-lg
+        border-solid
+        border-1
+        rounded-lg
+        m-1
+        
+    }
+
+    label {
+        @apply
+        text-lg
+        
+    }
+
+    textarea {
+        @apply
+        text-lg
+        border-solid
+        border-1
+        rounded-lg
+        
+    }
+
+    #ctt {
+        @apply
+        text-3xl
+        p-2.5
+        w-1/6
+        m-auto
+        mt-6
+        mb-6
+        flex
+        place-content-center
+        outline-orange-700
+        outline-offset-2
+        outline-3
+        rounded-lg
+        text-orange-800
+        font-bold
+        font-sans
+    }
+    
+    #cabecalho {
+        @apply
+        p-2
+        outline-orange-700
+        outline-offset-2
+        outline-4
+    }
+    
+    #cardapio {
+        @apply
+        inline-block
+        place-content-center
+        h-auto
+        m-10
+    }
+
+    #container-sugestion {
+        @apply
+        flex
+        flex-col
+        mx-auto
+        p-5
+    }
+
+    img {
+        @apply
+        w-25
+        m-auto
+    }
+
+    #lista-lanches {
+        @apply
+        grid 
+        grid-cols-2 
+        place-content-center
+        gap-6
+        m-7
+    }
+
+
+    #forms, #forms-ctt {
+        @apply
+        flex
+        mx-auto
+    }
+
+    #forms-ctt {
+        @apply
+        outline-offset-2
+        outline-2
+        rounded-lg
+        p-5
+        bg-gray-300
+        outline-blue-900
+    }
+
+    
+    #form-lanche, #form-sugestao {
+        @apply
+        mx-15
+        items-center 
+       
+        rounded-xl 
+        bg-gray-300 
+        p-6 
+        
+        shadow-lg
+        outline-orange-700
+        outline-offset-2
+        outline-2 ; 
+
+    }
+
+}
+
+

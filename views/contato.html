@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="/css/output.css">
+ 
+</head>
+<body>
+  <header id="cabecalho">
+      <img src="/images/logo.png" alt="">
+  </header>
+
+  <h2 id="ctt">Entre em Contato</h2>
+  <div id="forms-ctt">
+    <form id="contatoForm">
+      <label>Nome: <input type="text" name="nome" required /></label><br />
+      <label>Email: <input type="email" name="email" required /></label><br />
+      <label>Assunto: <input type="text" name="assunto" required /></label><br />
+      <label>Mensagem:<br />
+        <textarea name="mensagem" rows="5" required></textarea>
+      </label><br />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <script src="/scripts/contactScript.js"></script>
+</body>
+</html>
