@@ -36,4 +36,46 @@ const enviarContato = async (e) => {
     }
   };
   
+const contatoForm = document.getElementById('contatoForm');
+if (contatoForm) {
   contatoForm.addEventListener('submit', enviarContato);
+}
+
+const listaContainer = document.getElementById('lista-contatos');
+const mensagemInicial = document.getElementById('mensagem');
+
+if (listaContainer) {
+  fetch('/contato/json')
+    .then(res => res.json())
+    .then(contatos => {
+      if (!contatos.length) {
+        mensagemInicial.textContent = 'Nenhum contato foi enviado ainda.';
+        return;
+      }
+
+      mensagemInicial.remove();
+
+      contatos.forEach(contato => {
+        const div = document.createElement('div');
+        div.classList.add('sugestao', 'mb-8');
+
+        const titulo = document.createElement('h2');
+        titulo.textContent = 'Detalhes do Contato:';
+        titulo.classList.add('mb-5');
+        div.appendChild(titulo);
+
+        for (const chave in contato) {
+          const p = document.createElement('p');
+          p.innerHTML = `<strong>${chave.charAt(0).toUpperCase() + chave.slice(1)}:</strong> <span>${contato[chave]}</span>`;
+          div.appendChild(p);
+        }
+
+        listaContainer.appendChild(div);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      mensagemInicial.textContent = 'Erro ao carregar contatos.';
+    });
+}
+

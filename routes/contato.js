@@ -9,6 +9,7 @@ const router = Router();
 
 const filePath = path.resolve('public/data/contatos.json');
 const paginaContato = path.resolve('views/contato.html');
+const paginaExibirContato = path.resolve('views/exibir-contato.html');
 
 router.post('/', contatoValidator, async (req, res) => {
   const errors = validationResult(req);
@@ -39,20 +40,31 @@ router.post('/', contatoValidator, async (req, res) => {
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 router.get('/', (req, res) => {
-    res.sendFile(paginaContato)
-})
+  res.sendFile(paginaContato);
+});
+
+router.get('/json', async (req, res) => {
+  try {
+    const data = await fs.readFile(filePath, 'utf-8');
+    const contatos = JSON.parse(data);
+    res.status(HttpStatusCodes.OK).json(contatos);
+  } catch (err) {
+    console.error(err);
+    res.status(HttpStatusCodes.INTERNAL_SERVER_ERROR).json({ error: 'Erro ao ler contatos' });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default router

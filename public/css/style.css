@@ -16,7 +16,7 @@ button:hover, a:hover {
     opacity: 0.8;
 }
 
-h1, #ctt { 
+h1, #ctt, #list-ctt { 
     background-color: var(--color-orangelogo);
     opacity: 0.9;
 }
@@ -129,6 +129,16 @@ h1, #ctt {
         font-bold
         font-sans
     }
+
+    #list-ctt {
+        @apply
+        p-2.5
+        outline-orange-700
+        outline-offset-2
+        outline-3
+        rounded-lg
+        mb-10
+    }
     
     #cabecalho {
         @apply
@@ -168,12 +178,26 @@ h1, #ctt {
         gap-6
         m-7
     }
-
+    #lista-contatos {
+        @apply
+        flex
+        mx-auto
+        flex-col
+        mt-14
+        outline-orange-700
+        outline-offset-2
+        outline-4
+        rounded-lg
+        p-15
+        bg-gray-300
+        
+    }
 
     #forms, #forms-ctt {
         @apply
         flex
         mx-auto
+        p-7
     }
 
     #forms-ctt {

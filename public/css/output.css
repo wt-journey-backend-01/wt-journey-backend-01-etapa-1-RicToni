@@ -186,6 +186,9 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
 }
 #cabecalho, button, a {
   background-color: var(--color-azullogo);
@@ -194,7 +197,7 @@ button:hover, a:hover {
   background-color: var(--color-azullogo);
   opacity: 0.8;
 }
-h1, #ctt {
+h1, #ctt, #list-ctt {
   background-color: var(--color-orangelogo);
   opacity: 0.9;
 }
@@ -327,6 +330,15 @@ h1, #ctt {
     outline-offset: 2px;
     outline-color: var(--color-orange-700);
   }
+  #list-ctt {
+    margin-bottom: calc(var(--spacing) * 10);
+    border-radius: var(--radius-lg);
+    padding: calc(var(--spacing) * 2.5);
+    outline-style: var(--tw-outline-style);
+    outline-width: 3px;
+    outline-offset: 2px;
+    outline-color: var(--color-orange-700);
+  }
   #cabecalho {
     padding: calc(var(--spacing) * 2);
     outline-style: var(--tw-outline-style);
@@ -357,9 +369,23 @@ h1, #ctt {
     place-content: center;
     gap: calc(var(--spacing) * 6);
   }
+  #lista-contatos {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 14);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-gray-300);
+    padding: calc(var(--spacing) * 15);
+    outline-style: var(--tw-outline-style);
+    outline-width: 4px;
+    outline-offset: 2px;
+    outline-color: var(--color-orange-700);
+  }
   #forms, #forms-ctt {
     margin-inline: auto;
     display: flex;
+    padding: calc(var(--spacing) * 7);
   }
   #forms-ctt {
     border-radius: var(--radius-lg);
